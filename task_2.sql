@@ -4,13 +4,16 @@ CREATE TABLE IF NOT EXISTS authors (
     last_name VARCHAR(50),
     nationality VARCHAR(100),
     birth_year INT
+
 );
+ALTER TABLE authors
+ADD COLUMN author_name VARCHAR(100);
 
 CREATE TABLE IF NOT EXISTS books (
     book_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(255),
     author_id INT,
-    genre VARCHAR(50),
+
     price DECIMAL(10,2),
     publication_year INT,
     FOREIGN KEY (author_id) REFERENCES authors(author_id)
