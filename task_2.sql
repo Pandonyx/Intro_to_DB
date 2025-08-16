@@ -1,9 +1,6 @@
 CREATE TABLE IF NOT EXISTS authors (
     author_id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    nationality VARCHAR(100),
-    birth_year INT
+    Authors, author_name VARCHAR(215)
 
 );
 ALTER TABLE authors
